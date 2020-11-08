@@ -1,10 +1,10 @@
 class Command{
 	private:
 		char *name;
-		char *arguments[];
+		int argLength;
+		char *arguments[20];
 	public:
-		Command(char *name, char *arguments[]){
-			this->name = name;
-			this->arguments = arguments;
-		}
-}
+		Command(char *name, char *arguments[], int argLength);
+		void printArgs();
+		void run();
+};
