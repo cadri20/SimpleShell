@@ -16,7 +16,7 @@ class Command{
 	private:
 		char *name;
 		int argLength;
-		char *arguments[20];
+		char *arguments[30];
 	public:
 		Command(char *name, char *arguments[], int argLength);
 		void printArgs();
