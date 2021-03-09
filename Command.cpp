@@ -35,16 +35,12 @@ void Command::printArgs(){
 void Command::run(){
 	switch(fork()){
 		case 0:
-			//cout << "Soy el hijo" << endl;
 			execvp(name,arguments);
 			break;
 		case -1:
-			//cout << "Error" << endl;
 			break;
 		default:
-			//cout << "Soy el padre" << endl;
 			wait(NULL);
-			//cout << "El hijo termino" << endl;
 			break;
 	}
 }
